@@ -13,7 +13,7 @@ public class BitcoinService {
         String apiURL = "https://api.coincap.io/v2/assets/bitcoin";
         RestTemplate restTemplate = new RestTemplate();
         Bitcoin res = restTemplate.getForObject(apiURL, Bitcoin.class);
-        log.info("Got Bitcoin Price: {}", res.data.priceUsd);
+        log.info("Get the Bitcoin Price: {}", res.data.priceUsd);
         return res.data.priceUsd;
     }
 }
